@@ -51,7 +51,6 @@ textarea {
     padding: 0.2em 0;
 }
 
-
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
@@ -154,19 +153,56 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
+html {
+    background: #018DED;
+    /*url(http://unsplash.it/1500/1000?image=881&blur=50);*/
+    background-size: cover;
+    font-family: 'helvetica neue', serif;
+    text-align: center;
+    font-size: 10px;
+}
 
+body {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+}
 
+.clock {
+    width: 30rem;
+    height: 30rem;
+    border: 20px solid white;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 3px #EFEFEF,
+    inset 0 0 10px black,
+    0 0 10px rgba(0, 0, 0, 0.2);
+}
 
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); /* account for the height of the clock hands */
+}
 
-
-
-
-
-
-
-
-
-
+.hand {
+    width: 50%;
+    height: 6px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
 
 /* ==========================================================================
    Media Queries
@@ -174,10 +210,9 @@ nav a:hover {
 
 @media only screen and (min-width: 480px) {
 
-/* ====================
-    INTERMEDIATE: Menu
-   ==================== */
-
+    /* ====================
+        INTERMEDIATE: Menu
+       ==================== */
     nav a {
         float: left;
         width: 27%;
@@ -193,10 +228,9 @@ nav a:hover {
         margin-right: 0;
     }
 
-/* ========================
-    INTERMEDIATE: IE Fixes
-   ======================== */
-
+    /* ========================
+        INTERMEDIATE: IE Fixes
+       ======================== */
     nav ul li {
         display: inline;
     }
@@ -208,21 +242,19 @@ nav a:hover {
 
 @media only screen and (min-width: 768px) {
 
-/* ====================
-    WIDE: CSS3 Effects
-   ==================== */
-
+    /* ====================
+        WIDE: CSS3 Effects
+       ==================== */
     .header-container,
     .main aside {
         -webkit-box-shadow: 0 5px 10px #aaa;
-           -moz-box-shadow: 0 5px 10px #aaa;
-                box-shadow: 0 5px 10px #aaa;
+        -moz-box-shadow: 0 5px 10px #aaa;
+        box-shadow: 0 5px 10px #aaa;
     }
 
-/* ============
-    WIDE: Menu
-   ============ */
-
+    /* ============
+        WIDE: Menu
+       ============ */
     .title {
         float: left;
     }
@@ -232,10 +264,9 @@ nav a:hover {
         width: 38%;
     }
 
-/* ============
-    WIDE: Main
-   ============ */
-
+    /* ============
+        WIDE: Main
+       ============ */
     .main article {
         float: left;
         width: 57%;
@@ -249,10 +280,9 @@ nav a:hover {
 
 @media only screen and (min-width: 1140px) {
 
-/* ===============
-    Maximal Width
-   =============== */
-
+    /* ===============
+        Maximal Width
+       =============== */
     .wrapper {
         width: 1026px; /* 1140px - 10% for margins */
         margin: 0 auto;
